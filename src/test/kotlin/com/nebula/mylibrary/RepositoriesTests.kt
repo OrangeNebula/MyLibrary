@@ -1,12 +1,16 @@
+package com.nebula.mylibrary
+
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager
 
-class RepositoriesTests(
-    @Autowired val entityManager: TestEntityManager,
-    @Autowired val userRepository: UserRepository,
-    @Autowired val bookRepository: BookRepository,
+@DataJpaTest
+class RepositoriesTests @Autowired constructor(
+    val entityManager: TestEntityManager,
+    val userRepository: UserRepository,
+    val bookRepository: BookRepository,
 ) {
 
     @Test

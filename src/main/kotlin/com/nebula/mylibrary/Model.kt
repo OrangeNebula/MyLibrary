@@ -1,3 +1,5 @@
+package com.nebula.mylibrary
+
 import java.time.LocalDateTime
 import javax.persistence.*
 
